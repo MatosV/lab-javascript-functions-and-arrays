@@ -38,28 +38,65 @@ findLongestWord (words);
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-const sumNumbers = () {
+const sumNumbers = (numb) => {
 
-  let returnZero = []; 
+  emptyArray = 0;
 
-  for (let i=0; i < numbers.length; i++){
-    let numb = numbers[i] + numbers[i];
-    return numb;
+  for (let number of numb){
+    emptyArray += number;
   }
-
-}
+  return emptyArray;
+};
 
 sumNumbers(numbers);
+
+
+// BONUS
+
+const sum = () => {
+
+  emptyArray = 0;
+
+  if (!emptyArray) {
+    return 0;
+  }
+}
 
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+const averageNumbers = (arrNumb) =>{
+  if (!arrNumb.length){
+    return null;
+  }
 
+  const sum = sumNumbers(arrNumb);
+  const avg = sum / arrNumb.length;
+  return avg;
+}
+
+averageNumbers(numbersAvg)
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+const averageWordLength = (arrWords) => {
+  if (!arrWords.length){
+    return null;
+  }
+
+}
+
+averageWordLength(wordsArr);
+
+
+// Bonus - Iteration #4.1
+
+const avg = (arr) => {
+
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -76,8 +113,52 @@ const wordsUnique = [
   'bring'
 ];
 
+const uniquifyArray = (wordsUni) => {
+  if (!wordsUni.length){
+    return null;
+  }
+  
+  const newArr = [];
+  for (let word of wordsUni){
+    if (newArr.indexOf(word) < 0){
+      newArr.push(word);
+    }
+  }
+  return newArr;
+}
+
+/*
+uniquifyArray(wordsUnique);
+
+//OUTPUT
+
+  0: "crab"
+  1: "poison"
+  2: "contagious"
+  3: "simple"
+  4: "bring"
+  5: "sharp"
+  6: "playground"
+  7: "communion"
+
+*/
+
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+const doesWordExist = (arrayOfWords, word) =>{
+  if (!arrayOfWords.length) return null;
+
+  for(let parameter of arrayOfWords){
+    if (parameter === word){
+      return true;
+    } 
+    continue
+  } return false;
+
+}
+
+// doesWordExist (wordsFind,'subset');
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -93,6 +174,12 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+const howManyTimes = (arrayOfWords, word) => {
+    
+  }
+
+howManyTimes(wordsCount, machine);
 
 // Iteration #8: Bonus
 
@@ -118,3 +205,14 @@ const matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+const greatestProduct = (matrix) => {
+
+}
+
+
+//Bonus - Iteration #8.1
+
+const greatestProductOfDiagonals = (matrix) =>{
+
+}
